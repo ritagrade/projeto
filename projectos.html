@@ -1,0 +1,21 @@
+---
+layout: page
+title: Projectos
+---
+
+{% for projectos in site.projectos %}
+
+<div class="projectos">
+<h2>{{projectos.title}}</h2>
+{{projectos.content}}
+</div>
+
+{% endfor %}
+
+<ul>
+    {% for projectos in site.projectos %}
+        <li>
+            <a href="{{ projectos.url }}">{{ projectos.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
